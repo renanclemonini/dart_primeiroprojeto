@@ -1,0 +1,13 @@
+Criando projeto flutter
+
+flutter create -t app -a kotlin -i swift --org com.renanclemonini.apptrilha trilhaapp
+
+no flutter tudo é widget
+
+criar stateless -> st e tab (escolher stateless)
+
+quando o widget não muda precisa colocar um const antes
+o const é um padrão que o flutter sempre usa 
+
+pode usar debugPrint no lugar de print
+
