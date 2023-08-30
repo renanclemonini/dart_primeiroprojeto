@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
     // debugPrint("Chamando método build");
     return Scaffold(
       appBar: AppBar(
-        title: Text("Meu App", 
+        title: Text("Meu App",
         style: GoogleFonts.roboto(fontSize: 25, fontWeight: FontWeight.bold)
         ),
       ),
@@ -31,14 +31,21 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Container(
+              width: 250,
+              height: 100,
               color: Colors.cyan,
               child: Text(
                 "Ações do usuário",
+                textAlign: TextAlign.center,
                 style: GoogleFonts.acme(fontSize: 30),
               ),
             ),
-            Expanded(
+            
+            SizedBox(
+              width: 100,
+              height: 100,
               child: Container(
+                width: double.infinity,
                 color: Colors.blue,
                 child: Text(
                   "Foi clicado $qtdCliques vezes",
@@ -47,47 +54,50 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Container(
+              width: double.infinity,
               color: Colors.indigo,
               child: Text(
                 "O numero gerado é $numeroGerado",
                 style: GoogleFonts.acme(fontSize: 30),
               ),
             ),
-            Container(
-              color: Colors.blueGrey,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Expanded(
-                    child: Container(
-                      color: Colors.blue,
-                      child: Text(
-                        "Nome",
-                        style: GoogleFonts.acme(fontSize: 20),
+            Expanded(
+              child: Container(
+                color: Colors.blueGrey,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.blue,
+                        child: Text(
+                          "Nome",
+                          style: GoogleFonts.acme(fontSize: 20),
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 3,
-                    child: Container(
-                      color: Colors.yellow,
-                      child: Text(
-                        "Renan Clemonini",
-                        style: GoogleFonts.acme(fontSize: 20),
+                    Expanded(
+                      flex: 3,
+                      child: Container(
+                        color: Colors.yellow,
+                        child: Text(
+                          "Renan Clemonini",
+                          style: GoogleFonts.acme(fontSize: 20),
+                        ),
                       ),
                     ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      color: Colors.green,
-                      child: Text(
-                        "30",
-                        style: GoogleFonts.acme(fontSize: 20),
+                    Expanded(
+                      flex: 1,
+                      child: Container(
+                        color: Colors.green,
+                        child: Text(
+                          "30",
+                          style: GoogleFonts.acme(fontSize: 20),
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             )
           ],
